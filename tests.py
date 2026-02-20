@@ -14,5 +14,12 @@ class TestGreeting(unittest.TestCase):
         self.assertEqual(friend.greet(), "я твой консольный друг, привет)")
 
 
+class TestName(unittest.TestCase):
+    def test_set_name(self):
+        friend = ConsoleFriend()
+        friend.set_name("Леня")
+        self.assertEqual(friend.name, "Леня")
+
+
 if __name__ == "__main__":
     unittest.main()

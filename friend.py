@@ -9,9 +9,9 @@ class ConsoleFriend:
     def set_name(self, name):
         self.name = name
 
-    @staticmethod
-    def respond(message):
-        msg = message.lower()
-        if "как дела" in msg:
+    def respond(self, message):
+        if "как дела" in message.lower():
             return "хорошо, спасибо, что спросил"
-        return "я пока не такой умный, чтобы отвечать на что-то кроме как 'как дела?'"
+        if "как прошел день" in message.lower():
+            return f"да как обычно, {self.name}, ждал пока ты мне напишешь и захочешь узнать как прошел мой день, как прошел твой?"
+        return "я пока не такой умный, чтобы отвечать на такие сообщения"

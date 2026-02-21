@@ -33,6 +33,10 @@ class TestRespond(unittest.TestCase):
         response = self.friend.respond("как прошел день?")
         self.assertIn("да как обычно", response.lower())
 
+    def test_respond_about_users_day(self):
+        response = self.friend.respond("нормально")
+        self.assertIn("уверен", response.lower())
+
 
 if __name__ == "__main__":
     unittest.main()

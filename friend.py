@@ -14,4 +14,6 @@ class ConsoleFriend:
             return "хорошо, спасибо, что спросил"
         if "как прошел день" in message.lower():
             return f"да как обычно, {self.name}, ждал пока ты мне напишешь и захочешь узнать как прошел мой день, как прошел твой?"
+        if "нормально" in message.lower() or "хорошо" in message.lower() or "плохо" in message.lower():
+            return "уверен, что все будет куда лучше)"
         return "я пока не такой умный, чтобы отвечать на такие сообщения"

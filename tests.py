@@ -21,5 +21,12 @@ class TestName(unittest.TestCase):
         self.assertEqual(friend.name, "Леня")
 
 
+class TestRespond(unittest.TestCase):
+    def test_respond_how_are_you(self):
+        friend = ConsoleFriend()
+        response = friend.respond("как дела?")
+        self.assertIn("хорошо", response.lower())
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -22,10 +22,16 @@ class TestName(unittest.TestCase):
 
 
 class TestRespond(unittest.TestCase):
+    def setUp(self):
+        self.friend = ConsoleFriend()
+
     def test_respond_how_are_you(self):
-        friend = ConsoleFriend()
-        response = friend.respond("как дела?")
+        response = self.friend.respond("как дела?")
         self.assertIn("хорошо", response.lower())
+
+    def test_respond_about_day(self):
+        response = self.friend.respond("как прошел день?")
+        self.assertIn("да как обычно", response.lower())
 
 
 if __name__ == "__main__":

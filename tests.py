@@ -37,6 +37,10 @@ class TestRespond(unittest.TestCase):
         response = self.friend.respond("нормально")
         self.assertIn("уверен", response.lower())
 
+    def test_bye_message(self):
+        response = self.friend.respond("пока")
+        self.assertIn("еще спишемся", response.lower())
+
 
 if __name__ == "__main__":
     unittest.main()

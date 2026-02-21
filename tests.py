@@ -41,6 +41,14 @@ class TestRespond(unittest.TestCase):
         response = self.friend.respond("пока")
         self.assertIn("еще спишемся", response.lower())
 
+    def test_math_topic(self):
+        response = self.friend.respond("расскажи о математике")
+        self.assertIn("математика полна удивительных закономерностей", response.lower())
+
+    def test_google_topic(self):
+        response = self.friend.respond("что такое гугл")
+        self.assertIn("крупнейшая в мире транснациональная", response.lower())
+
 
 if __name__ == "__main__":
     unittest.main()
